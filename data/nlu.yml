@@ -1,0 +1,168 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - have a good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: user_language
+  examples: |
+    - [ikinyarwanda]{"entity":"language", "value":"Kinyarwanda"}
+    - mu [kinyarwanda]{"entity":"language", "value":"Kinyarwanda"}
+    - [Francais]{"entity":"language", "value":"Francais"}
+    - en [francais]{"entity":"language", "value":"Francais"}
+    - [english]{"entity":"language", "value":"English"}
+    - in [English]{"entity":"language", "value":"English"}
+
+- intent: ask_statistics
+  examples: |
+    - kumenya umubare w'abanduye
+    - umubare w'abanduye
+
+- intent: ask_statistics_location
+  examples: |
+    - umubare w'abanduye mu [Rwanda]{"entity":"location", "value":"Rwanda"}
+    - umubare w'abanduye ku [isi]{"entity":"location", "value":"world"} hose
+    - umubare w'abanduye ku [isi]{"entity":"location", "value":"world"} yose
+
+- intent: ask_other
+  examples: |
+    - kumenya ibindi bijyanye na covid
+    - ibindi bijyanye covid
+
+- intent: ask_about_covid
+  examples: |
+    - covid ni iki
+    - covid isobanura iki
+    - covid ivuga iki
+    - nsobanurira covid ni iki
+
+- intent: ask_symptoms
+  examples: |
+    - ibimenyetso
+    - ibimenyetso bya covid
+    - ibimenyetso bya covid ni ibihe
+
+- intent: ask_covid_prevention
+  examples: |
+    - uburyo bwo kwirinda
+    - ni gute nakwirinda
+    - ni ubuhe uburyo bwo kwirinda
+    - kwirinda
+    - kwirinda covid
+
+- intent: ask_kiny_agent
+  examples: |
+    - kuvugana n'umukozi wa RBC
+    - kuvugana n'umuntu wa RBC
+
+# - intent: ask_back_menu
+#   examples: |
+#     - gusubira inyuma
+#     - nsubiza inyuma
+
+# - intent: ask_restart_menu
+#   examples: |
+#     - gusubira ahabanza
+#     - nsubiza ahabanza
+
+- intent: user_done
+  examples: |
+    - gusohoka
+    - kurangiza
+    - kuvamo
+    - murakoze
+    - sawa
+    - sawa murakoze
+    - mwirirwe
+    - muramuke
+    - ijoro ryiza
+    - bayi
+    - umugoroba mwiza
+    - igitondo cyiza

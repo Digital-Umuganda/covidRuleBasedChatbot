@@ -1,0 +1,104 @@
+version: "2.0"
+
+rules:
+
+- rule: Ask user preferred language
+  steps:
+  - intent: user_language
+    entities:
+    - language
+  - slot_was_set:
+    - language: Kinyarwanda
+  - action: utter_kiny_ask_subject
+
+- rule: Ask user preferred language
+  steps:
+  - intent: user_language
+    entities:
+    - language
+  - slot_was_set:
+    - language: English
+  - action: utter_en_agent
+
+- rule: Ask user preferred language
+  steps:
+  - intent: user_language
+    entities:
+    - language
+  - slot_was_set:
+    - language: Francais
+  - action: utter_fr_agent
+
+- rule: Ask location of Covid statistics in Kinyarwanda
+  steps:
+  - action: utter_kiny_ask_subject
+  - intent: ask_statistics
+  - action: utter_kiny_ask_location
+
+- rule: Display Rwanda Covid Statistics in Kinyarwanda
+  steps:
+  - action: utter_kiny_ask_location
+  - intent: ask_statistics_location
+    entities:
+    - location
+  - slot_was_set:
+    - location: Rwanda
+  - action: action_kiny_rw_statistics
+
+- rule: Display World Wide Covid Statistics in Kinyarwanda
+  steps:
+  - action: utter_kiny_ask_location
+  - intent: ask_statistics_location
+    entities:
+    - location
+  - slot_was_set:
+    - location: world
+  - action: action_kiny_ww_statistics
+
+- rule: Display more information about Covid in Kinyarwanda
+  steps:
+  - action: utter_kiny_ask_subject
+  - intent: ask_other
+  - action: utter_kiny_ask_more_subject
+
+- rule: Display general information about Covid in Kinyarwanda
+  steps:
+  - action: utter_kiny_ask_more_subject
+  - intent: ask_about_covid
+  - action: action_kiny_about_covid
+
+- rule: Display information about Covid symptoms in Kinyarwanda
+  steps:
+  - action: utter_kiny_ask_more_subject
+  - intent: ask_symptoms
+  - action: action_kiny_covid_symptoms
+
+- rule: Display information about Covid prevention in Kinyarwanda
+  steps:
+  - action: utter_kiny_ask_more_subject
+  - intent: ask_covid_prevention
+  - action: action_kiny_covid_prevention
+
+- rule: Connect user to kinyarwandan speaking agent
+  steps:
+  - action: utter_kiny_ask_subject
+  - intent: ask_kiny_agent
+  - action: utter_kiny_agent
+
+# - rule: Go to previous menu
+#   steps:
+#   - intent: ask_back_menu
+#     entities:
+#     - language
+#   - slot_was_set:
+#     - language: Kinyarwanda
+#   - action: action_back_menu
+
+# - rule: Restart menu
+#   steps:
+#   - intent: ask_restart_menu
+#     entities:
+#     - language
+#   - slot_was_set:
+#     - language: Kinyarwanda
+#   - action: action_restart_menu

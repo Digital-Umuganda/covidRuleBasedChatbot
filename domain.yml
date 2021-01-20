@@ -1,0 +1,113 @@
+version: "2.0"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - user_language:
+      use_entities: 
+        - language
+  - ask_statistics:
+      use_entities: []
+  - ask_statistics_location:
+      use_entities: 
+        - location
+  - ask_other
+  - ask_about_covid
+  - ask_symptoms
+  - ask_covid_prevention
+  - ask_kiny_agent
+  - user_done
+
+entities:
+  - language
+  - location
+
+slots:
+  language:
+    type: categorical
+    values:
+      - Kinyarwanda
+      - English
+      - Francais
+
+  location:
+    type: categorical
+    values:
+      - Rwanda
+      - world
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_language:
+  - text: "Murakaza neza kuri Mbaza.\n
+    1. Vuga Ikinyarwanda\n
+    2. Say English\n
+    3. Dites Francais\n"
+
+  utter_kiny_agent:
+  - text: "Mwihangane ho umwanya muto tubashakire ubaha ubufasha.\n"
+
+  utter_en_agent:
+  - text: "Please wait a moment while we connect you to one of our agents.\n"
+
+  utter_fr_agent:
+  - text: "Veillez attendre un moment pendant qu'on vous connecte a l'un de nos agents.\n"
+
+  utter_kiny_ask_subject:
+  - text: "1. Kumenya umubare w'abanduye.\n
+    2. kumenya ibindi bijyanye na covid.\n
+    3. Kuvugana n'umukozi wa RBC.\n
+    4. Gusubira ahabanza.\n
+    5. Gusohoka.\n"
+
+  utter_kiny_ask_location:
+  - text: "1. Umubare w'abanduye mu Rwanda.\n
+    2. Umubare w'abanduye ku isi.\n
+    3. Gusubira inyuma.\n
+    4. Gusubira ahabanza.\n
+    5. Gusohoka.\n"
+
+  utter_kiny_ask_more_subject:
+  - text: "1. Covid ni iki?\n
+    2. Ibimenyetso bya covid ni ibihe.\n
+    3. Uburyo bwo kwirinda.\n
+    4. Gusubira inyuma.\n
+    5. Gusubira ahabanza.\n
+    6. Gusohoka.\n"
+
+  utter_kiny_thanks:
+  - text: "Murakoze gukoresha Mbaza"
+
+actions:
+  - action_kiny_rw_statistics
+  - action_kiny_ww_statistics
+  - action_kiny_about_covid
+  - action_kiny_covid_symptoms
+  - action_kiny_covid_prevention
