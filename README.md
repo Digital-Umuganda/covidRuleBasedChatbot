@@ -85,4 +85,3 @@ Bot >	Vuga Ikinyarwanda (Say Kinyarwanda)
 						- Kwambara masike (Wearing a mask)
 						- Gukaraba intoki (Wash hands)
 						- Gusiga intera ya metero (Stand one meter from each other)
-
