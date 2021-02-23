@@ -1,9 +1,9 @@
-Rasa Implementation of rule based Kinyarwanda COVID-19 chatbot v0.1
+# Rasa Implementation of rule based Kinyarwanda COVID-19 chatbot v0.1
 
 The chatbot should start the conversation with a language menu, but this feature hasn’t been implemented yet.
 So just enter the language you’re using at the start of the conversation.
 The navigation options like “back”, “home”, “exit” are available in the chatbot menus, but these features haven’t been implemented yet.
-##Menu1
+## Menu1
 The chatbot should start the conversation prompting the user to select a language, but this feature hasn’t been implemented yet.
 
 	Menu1
