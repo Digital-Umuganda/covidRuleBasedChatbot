@@ -27,13 +27,13 @@ If the user selected the **first** item of `menu1`
 > 4. Gusubira ahabanza. (Return to main menu)
 > 5. Gusohoka. (Exit the application)
 
-If the user selected the **second** item of `menu1`:
+If the user selected the **second** item of `menu1`
 
 	Input > English
 	Bot > 
 >- Please wait a moment while we connect you to one of our agents.
 
-If the user selected the **third** item of `menu1`:
+If the user selected the **third** item of `menu1`
 
 	Input > Francais (French)
 	Bot > 
@@ -51,7 +51,7 @@ If the user selected the **first** item of `menu2`
 > 5. Gusohoka. (Exit the application)
 > ##
 
-If the user selected the **first** item of `menu3`:
+If the user selected the **first** item of `menu3`
 
 	Input > Umubare w'abanduye mu Rwanda (Number of infected people in Rwanda)
 	Bot > 
@@ -62,7 +62,7 @@ If the user selected the **first** item of `menu3`:
 > - Ibipimo: 614,267(+2,583) (Number of test performed)
 > - Abapfuye: 47(+0) (Number of death)
 
-If the user selected the **second** item of `menu3`:
+If the user selected the **second** item of `menu3`
 
 	Input > Umubare w'abanduye ku isi (Number of infected people in the world)
 	Bot > 
@@ -83,7 +83,7 @@ If the user selected the **second** item of `menu2`
 > 5. Gusubira ahabanza. (Return to main menu)
 > 6. Gusohoka. (Exit the application)
 > ##
-If the user selected the **first** item of `menu4`:
+If the user selected the **first** item of `menu4`
 
 	Input > covid ni iki (what is covid)
 	Bot > 
@@ -91,7 +91,7 @@ If the user selected the **first** item of `menu4`:
 > - Covid-19 ni indwara yandura iterwa na virusi ya SARS Cov2
 (Covid-19 is a infectious disease that’s caused by the SARS Cov2 virus)
 
- If the user selected the **second** item of `menu4`:
+ If the user selected the **second** item of `menu4`
 
 	Input > Ibimenyetso bya covid ni ibihe. (What are the symptoms of covid)
 	Bot > 
@@ -100,7 +100,7 @@ If the user selected the **first** item of `menu4`:
 > - Umunaniro (Fatigue/tiredness)
 > - Inkorora (Cough)
 
-If the user selected the **third** item of `menu4`:
+If the user selected the **third** item of `menu4`
 
 	Input > Uburyo bwo kwirinda. (Prevention measures)
 	Bot > 
